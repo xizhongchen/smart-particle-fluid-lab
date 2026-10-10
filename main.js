@@ -214,6 +214,22 @@ document.addEventListener('DOMContentLoaded', () => {
         statsObserver.observe(statsSection);
     }
 
+    // --- Language toggle ---
+    const langToggle = document.getElementById('lang-toggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            document.body.classList.toggle('lang-zh');
+            const isZh = document.body.classList.contains('lang-zh');
+            document.documentElement.lang = isZh ? 'zh' : 'en';
+            localStorage.setItem('lang', isZh ? 'zh' : 'en');
+        });
+    }
+
+    if (localStorage.getItem('lang') === 'zh') {
+        document.body.classList.add('lang-zh');
+        document.documentElement.lang = 'zh';
+    }
+
     // --- Smooth scroll for anchor links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

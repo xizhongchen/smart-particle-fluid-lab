@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Particle Fluid Lab | Shanghai Jiao Tong University</title>
-    <meta name="description" content="Smart Particle Fluid Lab at Shanghai Jiao Tong University. Research in CFD-DEM, AI for Chemical Engineering, pharmaceutical engineering, and digital twins.">
+    <meta name="description" content="Smart Particle Fluid Lab at Shanghai Jiao Tong University.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -19,17 +19,21 @@
                 <span class="logo-icon"><i class="fas fa-atom"></i></span>
                 <span class="logo-text">SPFL</span>
             </a>
+            <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+                <span class="lang-en">中文</span>
+                <span class="lang-zh">EN</span>
+            </button>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#publications" class="nav-link">Publications</a></li>
-                <li><a href="#team" class="nav-link">Team</a></li>
-                <li><a href="#news" class="nav-link">News</a></li>
-                <li><a href="#contact" class="nav-link">Join Us</a></li>
+                <li><a href="#home" class="nav-link active"><span class="en">Home</span><span class="zh">首页</span></a></li>
+                <li><a href="#about" class="nav-link"><span class="en">About</span><span class="zh">关于</span></a></li>
+                <li><a href="#research" class="nav-link"><span class="en">Research</span><span class="zh">研究</span></a></li>
+                <li><a href="#publications" class="nav-link"><span class="en">Publications</span><span class="zh">论文</span></a></li>
+                <li><a href="#team" class="nav-link"><span class="en">Team</span><span class="zh">团队</span></a></li>
+                <li><a href="#news" class="nav-link"><span class="en">News</span><span class="zh">动态</span></a></li>
+                <li><a href="#contact" class="nav-link"><span class="en">Join Us</span><span class="zh">加入我们</span></a></li>
             </ul>
         </div>
     </nav>
@@ -40,12 +44,12 @@
             <canvas id="particle-canvas"></canvas>
         </div>
         <div class="hero-content">
-            <div class="hero-badge">Shanghai Jiao Tong University</div>
-            <h1 class="hero-title">Smart Particle<br><span class="highlight">Fluid Lab</span></h1>
-            <p class="hero-subtitle">Bridging <em>artificial intelligence</em> and <em>particle engineering</em> to unlock the next generation of chemical process design</p>
+            <div class="hero-badge"><span class="en">Shanghai Jiao Tong University</span><span class="zh">上海交通大学</span></div>
+            <h1 class="hero-title"><span class="en">Smart Particle<br><span class="highlight">Fluid Lab</span></span><span class="zh">智能颗粒<br><span class="highlight">流体实验室</span></span></h1>
+            <p class="hero-subtitle"><span class="en">Bridging <em>artificial intelligence</em> and <em>particle engineering</em> to unlock the next generation of chemical process design</span><span class="zh">融合<em>人工智能</em>与<em>颗粒工程</em>，开启新一代化工过程设计</span></p>
             <div class="hero-actions">
-                <a href="#research" class="btn btn-primary">Our Research</a>
-                <a href="#contact" class="btn btn-outline">Join the Lab</a>
+                <a href="#research" class="btn btn-primary"><span class="en">Our Research</span><span class="zh">研究方向</span></a>
+                <a href="#contact" class="btn btn-outline"><span class="en">Join the Lab</span><span class="zh">加入我们</span></a>
             </div>
         </div>
         <div class="hero-scroll">
@@ -57,30 +61,30 @@
     <section class="section about" id="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">About Us</span>
-                <h2 class="section-title">Pioneering Smart Particle Technologies</h2>
+                <span class="section-tag"><span class="en">About Us</span><span class="zh">关于我们</span></span>
+                <h2 class="section-title"><span class="en">Pioneering Smart Particle Technologies</span><span class="zh">引领智能颗粒技术前沿</span></h2>
             </div>
             <div class="about-grid">
                 <div class="about-text">
-                    <p class="about-lead">The Smart Particle Fluid Lab (SPFL) is led by <strong>Prof. Xizhong Chen</strong> at the School of Chemistry and Chemical Engineering, Shanghai Jiao Tong University.</p>
-                    <p>Our lab sits at the intersection of <strong>computational fluid dynamics</strong>, <strong>machine learning</strong>, and <strong>particle engineering</strong>. We develop multi-scale simulation methods and AI-driven tools to understand, predict, and optimize complex particle-fluid systems across chemical, pharmaceutical, and energy applications.</p>
-                    <p>With strong collaborations with world-leading institutions including the <strong>University of Cambridge</strong>, <strong>University of Edinburgh</strong>, and industry partners such as <strong>BASF</strong>, <strong>Pfizer</strong>, and <strong>Novartis</strong>, our research spans from fundamental science to real-world industrial impact.</p>
+                    <p class="about-lead"><span class="en">The Smart Particle Fluid Lab (SPFL) is led by <strong>Prof. Xizhong Chen</strong> at the School of Chemistry and Chemical Engineering, Shanghai Jiao Tong University.</span><span class="zh">智能颗粒流体实验室（SPFL）由上海交通大学化学化工学院<strong>陈锡忠长聘副教授</strong>领衔。</span></p>
+                    <p><span class="en">Our lab sits at the intersection of <strong>computational fluid dynamics</strong>, <strong>machine learning</strong>, and <strong>particle engineering</strong>. We develop multi-scale simulation methods and AI-driven tools to understand, predict, and optimize complex particle-fluid systems across chemical, pharmaceutical, and energy applications.</span><span class="zh">实验室聚焦<strong>计算流体力学</strong>、<strong>机器学习</strong>与<strong>颗粒工程</strong>的交叉领域，开发多尺度模拟方法和AI驱动工具，用于理解、预测和优化化工、制药及能源领域的复杂颗粒流体系统。</span></p>
+                    <p><span class="en">With strong collaborations with world-leading institutions including the <strong>University of Cambridge</strong>, <strong>University of Edinburgh</strong>, and industry partners such as <strong>BASF</strong>, <strong>Pfizer</strong>, and <strong>Novartis</strong>, our research spans from fundamental science to real-world industrial impact.</span><span class="zh">实验室与<strong>剑桥大学</strong>、<strong>爱丁堡大学</strong>等国际顶尖高校，以及<strong>BASF</strong>、<strong>Pfizer</strong>、<strong>Novartis</strong>等企业保持紧密合作，研究从基础科学延伸至工业应用。</span></p>
                     <div class="about-stats">
                         <div class="stat">
                             <span class="stat-number" data-target="41">0</span>
-                            <span class="stat-label">Publications</span>
+                            <span class="stat-label"><span class="en">Publications</span><span class="zh">论文</span></span>
                         </div>
                         <div class="stat">
                             <span class="stat-number" data-target="15">0</span>
-                            <span class="stat-label">Projects</span>
+                            <span class="stat-label"><span class="en">Projects</span><span class="zh">项目</span></span>
                         </div>
                         <div class="stat">
                             <span class="stat-number" data-target="6">0</span>
-                            <span class="stat-label">Patents</span>
+                            <span class="stat-label"><span class="en">Patents</span><span class="zh">专利</span></span>
                         </div>
                         <div class="stat">
                             <span class="stat-number" data-target="9">0</span>
-                            <span class="stat-label">Awards</span>
+                            <span class="stat-label"><span class="en">Awards</span><span class="zh">奖项</span></span>
                         </div>
                     </div>
                 </div>
@@ -90,44 +94,44 @@
                             <img src="https://scce.sjtu.edu.cn/upload/image/20240630/20240630172421.jpg" alt="Prof. Xizhong Chen" loading="lazy">
                         </div>
                         <div class="pi-info">
-                            <h3>Prof. Xizhong Chen</h3>
-                            <p class="pi-title">Tenured Associate Professor</p>
-                            <p class="pi-affiliation">School of Chemistry and Chemical Engineering<br>Shanghai Jiao Tong University</p>
+                            <h3><span class="en">Prof. Xizhong Chen</span><span class="zh">陈锡忠 教授</span></h3>
+                            <p class="pi-title"><span class="en">Associate Professor</span><span class="zh">长聘教轨副教授</span></p>
+                            <p class="pi-affiliation"><span class="en">School of Chemistry and Chemical Engineering<br>Shanghai Jiao Tong University</span><span class="zh">上海交通大学<br>化学化工学院</span></p>
                             <div class="pi-contact">
                                 <a href="mailto:chenxizh@sjtu.edu.cn"><i class="fas fa-envelope"></i> chenxizh@sjtu.edu.cn</a>
-                                <span><i class="fas fa-map-marker-alt"></i> Room A407A, Chemical Engineering Building</span>
+                                <span><i class="fas fa-map-marker-alt"></i> <span class="en">Room A407A, Chemical Engineering Building</span><span class="zh">化工学院A楼407A</span></span>
                             </div>
                             <div class="pi-links">
-                                <a href="https://scce.sjtu.edu.cn/teachers/3196.html" target="_blank" class="pi-link-btn">SJTU Profile</a>
+                                <a href="https://scce.sjtu.edu.cn/teachers/3196.html" target="_blank" class="pi-link-btn"><span class="en">SJTU Profile</span><span class="zh">交大主页</span></a>
                             </div>
                         </div>
                     </div>
                     <div class="pi-cv">
-                        <h4>Education & Experience</h4>
+                        <h4><span class="en">Education & Experience</span><span class="zh">教育与工作经历</span></h4>
                         <ul class="timeline">
                             <li>
                                 <span class="timeline-year">2021 - 2022</span>
-                                <span class="timeline-text">Assistant Professor, University of Sheffield</span>
+                                <span class="timeline-text"><span class="en">Assistant Professor, University of Sheffield</span><span class="zh">谢菲尔德大学 助理教授</span></span>
                             </li>
                             <li>
                                 <span class="timeline-year">2020 - 2021</span>
-                                <span class="timeline-text">Eli Lilly Visiting Lecturer, University College Cork</span>
+                                <span class="timeline-text"><span class="en">Eli Lilly Visiting Lecturer, University College Cork</span><span class="zh">爱尔兰科克大学 礼来制药冠名讲师</span></span>
                             </li>
                             <li>
                                 <span class="timeline-year">2018 - 2020</span>
-                                <span class="timeline-text">Postdoctoral Researcher, University of Cambridge</span>
+                                <span class="timeline-text"><span class="en">Postdoctoral Researcher, University of Cambridge</span><span class="zh">剑桥大学 博士后</span></span>
                             </li>
                             <li>
                                 <span class="timeline-year">2016 - 2018</span>
-                                <span class="timeline-text">Marie Curie Fellow, University of Edinburgh</span>
+                                <span class="timeline-text"><span class="en">Marie Curie Fellow, University of Edinburgh</span><span class="zh">爱丁堡大学 玛丽居里学者</span></span>
                             </li>
                             <li>
                                 <span class="timeline-year">2010 - 2016</span>
-                                <span class="timeline-text">Ph.D., Institute of Process Engineering, CAS</span>
+                                <span class="timeline-text"><span class="en">Ph.D., Institute of Process Engineering, CAS</span><span class="zh">中国科学院过程工程研究所 博士</span></span>
                             </li>
                             <li>
                                 <span class="timeline-year">2006 - 2010</span>
-                                <span class="timeline-text">Dual B.S., Xiamen University</span>
+                                <span class="timeline-text"><span class="en">Dual B.S., Xiamen University</span><span class="zh">厦门大学 化学工程与数理经济学双学士</span></span>
                             </li>
                         </ul>
                     </div>
@@ -140,81 +144,69 @@
     <section class="section research" id="research">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Research</span>
-                <h2 class="section-title">Our Research Areas</h2>
-                <p class="section-desc">We combine physics-based modeling with data-driven AI to solve complex problems in particle-fluid systems</p>
+                <span class="section-tag"><span class="en">Research</span><span class="zh">研究方向</span></span>
+                <h2 class="section-title"><span class="en">Our Research Areas</span><span class="zh">研究领域</span></h2>
+                <p class="section-desc"><span class="en">We combine physics-based modeling with data-driven AI to solve complex problems in particle-fluid systems</span><span class="zh">我们将物理建模与数据驱动AI相结合，解决颗粒流体系统中的复杂问题</span></p>
             </div>
             <div class="research-grid">
                 <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-wind"></i>
-                    </div>
-                    <h3>CFD-DEM Simulation</h3>
-                    <p>High-fidelity computational fluid dynamics coupled with discrete element method for modeling gas-solid and liquid-solid multiphase flows at particle resolution.</p>
+                    <div class="research-icon"><i class="fas fa-wind"></i></div>
+                    <h3><span class="en">CFD-DEM Simulation</span><span class="zh">CFD-DEM 模拟</span></h3>
+                    <p><span class="en">High-fidelity computational fluid dynamics coupled with discrete element method for modeling gas-solid and liquid-solid multiphase flows at particle resolution.</span><span class="zh">高保真计算流体力学耦合离散单元法，在颗粒分辨率下模拟气固和液固多相流。</span></p>
                     <div class="research-tags">
                         <span>CFD-DEM</span>
-                        <span>Multiphase Flow</span>
-                        <span>Granular Flow</span>
+                        <span><span class="en">Multiphase Flow</span><span class="zh">多相流</span></span>
+                        <span><span class="en">Granular Flow</span><span class="zh">颗粒流</span></span>
                     </div>
                 </div>
                 <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>AI for Chemical Engineering</h3>
-                    <p>Machine learning, deep learning, and graph neural networks for surrogate modeling, inverse design, and real-time prediction of chemical processes.</p>
+                    <div class="research-icon"><i class="fas fa-brain"></i></div>
+                    <h3><span class="en">AI for Chemical Engineering</span><span class="zh">AI+化工</span></h3>
+                    <p><span class="en">Machine learning, deep learning, and graph neural networks for surrogate modeling, inverse design, and real-time prediction of chemical processes.</span><span class="zh">利用机器学习、深度学习和图神经网络进行化工过程的代理建模、逆向设计和实时预测。</span></p>
                     <div class="research-tags">
                         <span>GNN</span>
-                        <span>Deep Learning</span>
-                        <span>Surrogate Model</span>
+                        <span><span class="en">Deep Learning</span><span class="zh">深度学习</span></span>
+                        <span><span class="en">Surrogate Model</span><span class="zh">代理模型</span></span>
                     </div>
                 </div>
                 <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-pills"></i>
-                    </div>
-                    <h3>Pharmaceutical Engineering</h3>
-                    <p>Multi-scale modeling of solid dosage forms including powder mixing, tablet compression, and dissolution prediction using physics-informed neural networks.</p>
+                    <div class="research-icon"><i class="fas fa-pills"></i></div>
+                    <h3><span class="en">Pharmaceutical Engineering</span><span class="zh">制药工程</span></h3>
+                    <p><span class="en">Multi-scale modeling of solid dosage forms including powder mixing, tablet compression, and dissolution prediction using physics-informed neural networks.</span><span class="zh">固体制剂的多尺度建模，包括粉末混合、压片及利用物理信息神经网络进行溶出预测。</span></p>
                     <div class="research-tags">
-                        <span>Solid Dosage</span>
-                        <span>Powder Mixing</span>
-                        <span>Dissolution</span>
+                        <span><span class="en">Solid Dosage</span><span class="zh">固体制剂</span></span>
+                        <span><span class="en">Powder Mixing</span><span class="zh">粉末混合</span></span>
+                        <span><span class="en">Dissolution</span><span class="zh">溶出预测</span></span>
                     </div>
                 </div>
                 <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <h3>Digital Twin</h3>
-                    <p>Building digital twin systems for industrial equipment including fluidized bed jet mills, fixed-bed reactors, and corrosion pipeline monitoring.</p>
+                    <div class="research-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3><span class="en">Digital Twin</span><span class="zh">数字孪生</span></h3>
+                    <p><span class="en">Building digital twin systems for industrial equipment including fluidized bed jet mills, fixed-bed reactors, and corrosion pipeline monitoring.</span><span class="zh">为流化床气流磨机、固定床反应器和腐蚀管道监测等工业设备构建数字孪生系统。</span></p>
                     <div class="research-tags">
-                        <span>Real-time Prediction</span>
-                        <span>Process Safety</span>
-                        <span>Equipment Design</span>
+                        <span><span class="en">Real-time Prediction</span><span class="zh">实时预测</span></span>
+                        <span><span class="en">Process Safety</span><span class="zh">过程安全</span></span>
+                        <span><span class="en">Equipment Design</span><span class="zh">设备设计</span></span>
                     </div>
                 </div>
                 <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-cubes"></i>
-                    </div>
-                    <h3>Particle Engineering</h3>
-                    <p>Fundamental study of particle breakage, adhesion, coating, and flowability using DEM bonded contact models and experimental characterization.</p>
+                    <div class="research-icon"><i class="fas fa-cubes"></i></div>
+                    <h3><span class="en">Particle Engineering</span><span class="zh">颗粒工程</span></h3>
+                    <p><span class="en">Fundamental study of particle breakage, adhesion, coating, and flowability using DEM bonded contact models and experimental characterization.</span><span class="zh">利用DEM粘结接触模型和实验表征，研究颗粒破碎、粘附、涂层和流动性的基本规律。</span></p>
                     <div class="research-tags">
-                        <span>Particle Breakage</span>
-                        <span>Adhesion</span>
-                        <span>Flowability</span>
+                        <span><span class="en">Particle Breakage</span><span class="zh">颗粒破碎</span></span>
+                        <span><span class="en">Adhesion</span><span class="zh">粘附</span></span>
+                        <span><span class="en">Flowability</span><span class="zh">流动性</span></span>
                     </div>
                 </div>
                 <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3>Multi-scale Modeling</h3>
-                    <p>Bridging nano, micro, and macro scales through dynamic multi-scale methods coupling two-fluid models with discrete particle models for industrial reactors.</p>
+                    <div class="research-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3><span class="en">Multi-scale Modeling</span><span class="zh">多尺度模拟</span></h3>
+                    <p><span class="en">Bridging nano, micro, and macro scales through dynamic multi-scale methods coupling two-fluid models with discrete particle models for industrial reactors.</span><span class="zh">通过动态多尺度方法耦合双流体模型与离散颗粒模型，跨越纳米、微观和宏观尺度，服务于工业反应器。</span></p>
                     <div class="research-tags">
-                        <span>Coarse-Graining</span>
-                        <span>Population Balance</span>
-                        <span>Reduced-Order Model</span>
+                        <span><span class="en">Coarse-Graining</span><span class="zh">粗粒化</span></span>
+                        <span><span class="en">Population Balance</span><span class="zh">群体平衡</span></span>
+                        <span><span class="en">Reduced-Order Model</span><span class="zh">降阶模型</span></span>
                     </div>
                 </div>
             </div>
@@ -225,19 +217,18 @@
     <section class="section publications" id="publications">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Publications</span>
-                <h2 class="section-title">Selected Publications</h2>
-                <p class="section-desc">A selection of our recent peer-reviewed papers. For the full list, visit <a href="https://scce.sjtu.edu.cn/teachers/3196.html" target="_blank">Prof. Chen's SJTU profile</a>.</p>
+                <span class="section-tag"><span class="en">Publications</span><span class="zh">学术论文</span></span>
+                <h2 class="section-title"><span class="en">Selected Publications</span><span class="zh">代表性论文</span></h2>
+                <p class="section-desc"><span class="en">A selection of our recent peer-reviewed papers. For the full list, visit <a href="https://scce.sjtu.edu.cn/teachers/3196.html" target="_blank">Prof. Chen's SJTU profile</a>.</span><span class="zh">精选近期论文，完整列表请访问<a href="https://scce.sjtu.edu.cn/teachers/3196.html" target="_blank">陈锡忠教授交大主页</a>。</span></p>
             </div>
             <div class="pub-filters">
-                <button class="pub-filter active" data-filter="all">All</button>
+                <button class="pub-filter active" data-filter="all"><span class="en">All</span><span class="zh">全部</span></button>
                 <button class="pub-filter" data-filter="2026">2026</button>
                 <button class="pub-filter" data-filter="2025">2025</button>
                 <button class="pub-filter" data-filter="2024">2024</button>
-                <button class="pub-filter" data-filter="older">Earlier</button>
+                <button class="pub-filter" data-filter="older"><span class="en">Earlier</span><span class="zh">更早</span></button>
             </div>
             <div class="pub-list">
-                <!-- 2026/2027 -->
                 <div class="pub-item" data-year="2026">
                     <div class="pub-year">2027</div>
                     <div class="pub-content">
@@ -257,7 +248,7 @@
                 <div class="pub-item" data-year="2026">
                     <div class="pub-year">2026</div>
                     <div class="pub-content">
-                        <h4>Surrogate-Based Multi-objective Bayesian Optimization for Energy Efficient Post-Combustion CO<sub>2</sub> Capture Using Process Simulation and Exact Gaussian Processes</h4>
+                        <h4>Surrogate-Based Multi-objective Bayesian Optimization for Energy Efficient Post-Combustion CO<sub>2</sub> Capture</h4>
                         <p class="pub-authors">Yaqub MW, Huang Y, <strong>Chen X</strong></p>
                         <p class="pub-journal"><em>Energy</em>, 142424</p>
                     </div>
@@ -294,7 +285,6 @@
                         <p class="pub-journal"><em>Physics of Fluids</em>, 38(2)</p>
                     </div>
                 </div>
-                <!-- 2025 -->
                 <div class="pub-item" data-year="2025">
                     <div class="pub-year">2025</div>
                     <div class="pub-content">
@@ -338,7 +328,7 @@
                 <div class="pub-item" data-year="2025">
                     <div class="pub-year">2025</div>
                     <div class="pub-content">
-                        <h4>A mechanical-thermal-chemical coupling discrete element method model for simulating hotspot generation and ignition in HMX-based explosives</h4>
+                        <h4>A mechanical-thermal-chemical coupling DEM model for simulating hotspot generation and ignition in HMX-based explosives</h4>
                         <p class="pub-authors">Pan M, Wang Z, Mu L, Liu C, <strong>Chen X</strong></p>
                         <p class="pub-journal"><em>Particuology</em>, 104, 68-87</p>
                     </div>
@@ -351,7 +341,6 @@
                         <p class="pub-journal"><em>Particuology</em>, 96, 126-138</p>
                     </div>
                 </div>
-                <!-- 2024 -->
                 <div class="pub-item" data-year="2024">
                     <div class="pub-year">2024</div>
                     <div class="pub-content">
@@ -384,7 +373,6 @@
                         <p class="pub-journal"><em>Digital Chemical Engineering</em>, 12, 100175</p>
                     </div>
                 </div>
-                <!-- Older -->
                 <div class="pub-item" data-year="older">
                     <div class="pub-year">2023</div>
                     <div class="pub-content">
@@ -420,7 +408,7 @@
                 <div class="pub-item" data-year="older">
                     <div class="pub-year">2019</div>
                     <div class="pub-content">
-                        <h4>Quantifying the non-equilibrium characteristics of heterogeneous gas-solid flow of smooth, inelastic spheres using a CFD-DEM</h4>
+                        <h4>Quantifying the non-equilibrium characteristics of heterogeneous gas-solid flow using a CFD-DEM</h4>
                         <p class="pub-authors"><strong>Chen X</strong>, Wang J</p>
                         <p class="pub-journal"><em>Journal of Fluid Mechanics</em>, 866, 776-790</p>
                     </div>
@@ -457,54 +445,53 @@
     <section class="section team" id="team">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Team</span>
-                <h2 class="section-title">Our Group</h2>
-                <p class="section-desc">A diverse and international team of researchers working at the frontier of particle science and AI</p>
+                <span class="section-tag"><span class="en">Team</span><span class="zh">团队</span></span>
+                <h2 class="section-title"><span class="en">Our Group</span><span class="zh">团队成员</span></h2>
+                <p class="section-desc"><span class="en">A diverse and international team of researchers working at the frontier of particle science and AI</span><span class="zh">一支多元化的国际团队，致力于颗粒科学与AI前沿研究</span></p>
             </div>
             <div class="team-grid">
                 <div class="team-card pi">
                     <div class="team-avatar">
                         <img src="https://scce.sjtu.edu.cn/upload/image/20240630/20240630172421.jpg" alt="Prof. Xizhong Chen" loading="lazy">
                     </div>
-                    <h3>Prof. Xizhong Chen</h3>
-                    <p class="team-role">Principal Investigator</p>
-                    <p class="team-desc"> Associate Professor</p>
+                    <h3><span class="en">Prof. Xizhong Chen</span><span class="zh">陈锡忠 教授</span></h3>
+                    <p class="team-role"><span class="en">Principal Investigator</span><span class="zh">课题组长</span></p>
+                    <p class="team-desc"><span class="en">Tenured Associate Professor</span><span class="zh">长聘副教授</span></p>
                 </div>
                 <div class="team-card">
                     <div class="team-avatar placeholder"><i class="fas fa-user"></i></div>
                     <h3>Tingting Liu</h3>
-                    <p class="team-role">Ph.D. Student</p>
-                    <p class="team-desc">Deep learning for reactor design</p>
+                    <p class="team-role"><span class="en">Ph.D. Student</span><span class="zh">博士生</span></p>
+                    <p class="team-desc"><span class="en">Deep learning for reactor design</span><span class="zh">深度学习与反应器设计</span></p>
                 </div>
                 <div class="team-card">
                     <div class="team-avatar placeholder"><i class="fas fa-user"></i></div>
                     <h3>Dr. Sajad Khodadadi</h3>
-                    <p class="team-role">Postdoctoral Researcher</p>
-                    <p class="team-desc">Multi-scale modeling</p>
+                    <p class="team-role"><span class="en">Postdoctoral Researcher</span><span class="zh">博士后</span></p>
+                    <p class="team-desc"><span class="en">Multi-scale modeling</span><span class="zh">多尺度模拟</span></p>
                 </div>
                 <div class="team-card">
                     <div class="team-avatar placeholder"><i class="fas fa-user"></i></div>
                     <h3>Dr. Muhammad Waqas Yaqub</h3>
-                    <p class="team-role">Postdoctoral Researcher</p>
-                    <p class="team-desc">Vision transformers & ML</p>
+                    <p class="team-role"><span class="en">Postdoctoral Researcher</span><span class="zh">博士后</span></p>
+                    <p class="team-desc"><span class="en">Vision transformers & ML</span><span class="zh">视觉Transformer与机器学习</span></p>
                 </div>
                 <div class="team-card">
                     <div class="team-avatar placeholder"><i class="fas fa-user"></i></div>
                     <h3>Leqi Lin</h3>
-                    <p class="team-role">Ph.D. Student</p>
-                    <p class="team-desc">Graph neural networks for granular flows</p>
+                    <p class="team-role"><span class="en">Ph.D. Student</span><span class="zh">博士生</span></p>
+                    <p class="team-desc"><span class="en">Graph neural networks for granular flows</span><span class="zh">图神经网络与颗粒流</span></p>
                 </div>
                 <div class="team-card">
                     <div class="team-avatar placeholder"><i class="fas fa-user"></i></div>
                     <h3>Kaiyuan Yang</h3>
-                    <p class="team-role">Ph.D. Student</p>
-                    <p class="team-desc">DEM & elastoplastic bond models</p>
+                    <p class="team-role"><span class="en">Ph.D. Student</span><span class="zh">博士生</span></p>
+                    <p class="team-desc"><span class="en">DEM & elastoplastic bond models</span><span class="zh">DEM与弹塑性粘结模型</span></p>
                 </div>
-
             </div>
             <div class="team-alumni">
-                <h3>Alumni & Collaborators</h3>
-                <p>Our group maintains collaborations with researchers at the <strong>University of Edinburgh</strong>, <strong>University of Sheffield</strong>, and industry partners. Many of our former members now hold positions at leading universities and companies worldwide.</p>
+                <h3><span class="en">Alumni & Collaborators</span><span class="zh">校友与合作者</span></h3>
+                <p><span class="en">Our group maintains collaborations with researchers at the <strong>University of Edinburgh</strong>, <strong>University of Sheffield</strong>, and industry partners. Many of our former members now hold positions at leading universities and companies worldwide.</span><span class="zh">课题组与<strong>爱丁堡大学</strong>、<strong>谢菲尔德大学</strong>等高校及企业保持密切合作。多位已毕业成员在全球知名高校和企业任职。</span></p>
             </div>
         </div>
     </section>
@@ -513,44 +500,36 @@
     <section class="section news" id="news">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">News</span>
-                <h2 class="section-title">Latest Updates</h2>
+                <span class="section-tag"><span class="en">News</span><span class="zh">新闻动态</span></span>
+                <h2 class="section-title"><span class="en">Latest Updates</span><span class="zh">最新动态</span></h2>
             </div>
             <div class="news-grid">
                 <div class="news-item">
-                    <div class="news-date">
-                        <span class="news-month">2026</span>
-                    </div>
+                    <div class="news-date"><span class="news-month">2026</span></div>
                     <div class="news-content">
-                        <h4>New paper in <em>Chemical Engineering Science</em></h4>
-                        <p>Our work on Bayesian-enhanced GNN for predictive modeling and inverse design of granular mixing has been published.</p>
+                        <h4><span class="en">New paper in <em>Chemical Engineering Science</em></span><span class="zh">新论文发表于 <em>Chemical Engineering Science</em></span></h4>
+                        <p><span class="en">Our work on Bayesian-enhanced GNN for predictive modeling and inverse design of granular mixing has been published.</span><span class="zh">我们关于贝叶斯增强图神经网络用于颗粒混合预测建模和逆向设计的工作已发表。</span></p>
                     </div>
                 </div>
                 <div class="news-item">
-                    <div class="news-date">
-                        <span class="news-month">2026</span>
-                    </div>
+                    <div class="news-date"><span class="news-month">2026</span></div>
                     <div class="news-content">
-                        <h4>DeepSeek-LLM for Pharmaceutical Dissolution</h4>
-                        <p>Our latest work combining large language models with Adaptive RAG for pharmaceutical dissolution prediction is now published in <em>Pharmaceutical Research</em>.</p>
+                        <h4><span class="en">DeepSeek-LLM for Pharmaceutical Dissolution</span><span class="zh">DeepSeek-LLM用于药物溶出预测</span></h4>
+                        <p><span class="en">Our latest work combining large language models with Adaptive RAG for pharmaceutical dissolution prediction is now published in <em>Pharmaceutical Research</em>.</span><span class="zh">我们将大语言模型与自适应RAG结合用于药物溶出预测的最新工作发表于<em>Pharmaceutical Research</em>。</span></p>
                     </div>
                 </div>
                 <div class="news-item">
-                    <div class="news-date">
-                        <span class="news-month">2025</span>
-                    </div>
+                    <div class="news-date"><span class="news-month">2025</span></div>
                     <div class="news-content">
-                        <h4>Multiple papers accepted in top journals</h4>
-                        <p>Congratulations to the team! Papers accepted in <em>AIChE Journal</em>, <em>Chemical Engineering Journal</em>, <em>Powder Technology</em>, and <em>Particuology</em>.</p>
+                        <h4><span class="en">Multiple papers accepted in top journals</span><span class="zh">多篇论文被顶级期刊接收</span></h4>
+                        <p><span class="en">Congratulations to the team! Papers accepted in <em>AIChE Journal</em>, <em>Chemical Engineering Journal</em>, <em>Powder Technology</em>, and <em>Particuology</em>.</span><span class="zh">祝贺团队！论文被<em>AIChE Journal</em>、<em>Chemical Engineering Journal</em>、<em>Powder Technology</em>和<em>Particuology</em>接收。</span></p>
                     </div>
                 </div>
                 <div class="news-item">
-                    <div class="news-date">
-                        <span class="news-month">2025</span>
-                    </div>
+                    <div class="news-date"><span class="news-month">2025</span></div>
                     <div class="news-content">
-                        <h4>Recruiting Ph.D. students and Postdocs</h4>
-                        <p>We are actively recruiting graduate students and postdoctoral researchers in chemical engineering, AI, and particle engineering. See <a href="#contact">Join Us</a> for details.</p>
+                        <h4><span class="en">Recruiting Ph.D. students and Postdocs</span><span class="zh">招收博士生和博士后</span></h4>
+                        <p><span class="en">We are actively recruiting graduate students and postdoctoral researchers in chemical engineering, AI, and particle engineering. See <a href="#contact">Join Us</a> for details.</span><span class="zh">课题组正在招收化工、AI和颗粒工程方向的研究生和博士后。详见<a href="#contact">加入我们</a>。</span></p>
                     </div>
                 </div>
             </div>
@@ -561,68 +540,68 @@
     <section class="section contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Join Us</span>
-                <h2 class="section-title">Open Positions</h2>
+                <span class="section-tag"><span class="en">Join Us</span><span class="zh">加入我们</span></span>
+                <h2 class="section-title"><span class="en">Open Positions</span><span class="zh">招生招聘</span></h2>
             </div>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h3>We Are Looking for Motivated Students & Researchers</h3>
-                    <p>The Smart Particle Fluid Lab is actively recruiting:</p>
+                    <h3><span class="en">We Are Looking for Motivated Students & Researchers</span><span class="zh">欢迎有志之士加入</span></h3>
+                    <p><span class="en">The Smart Particle Fluid Lab is actively recruiting:</span><span class="zh">智能颗粒流体实验室长期招收：</span></p>
                     <ul class="positions-list">
                         <li>
                             <i class="fas fa-graduation-cap"></i>
                             <div>
-                                <strong>Ph.D. Students</strong>
-                                <span>Chemical Engineering, AI, CFD, Particle Engineering</span>
+                                <strong><span class="en">Ph.D. Students</span><span class="zh">博士生</span></strong>
+                                <span><span class="en">Chemical Engineering, AI, CFD, Particle Engineering</span><span class="zh">化学工程、人工智能、CFD、颗粒工程</span></span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-user-graduate"></i>
                             <div>
-                                <strong>Master's Students</strong>
-                                <span>Chemical Engineering, Computer Simulation</span>
+                                <strong><span class="en">Master's Students</span><span class="zh">硕士生</span></strong>
+                                <span><span class="en">Chemical Engineering, Computer Simulation</span><span class="zh">化学工程、计算机仿真</span></span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-flask"></i>
                             <div>
-                                <strong>Postdoctoral Researchers</strong>
-                                <span>AI + Chemical Engineering, Digital Twins</span>
+                                <strong><span class="en">Postdoctoral Researchers</span><span class="zh">博士后</span></strong>
+                                <span><span class="en">AI + Chemical Engineering, Digital Twins</span><span class="zh">AI+化工、数字孪生</span></span>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-globe"></i>
                             <div>
-                                <strong>Visiting Students & Scholars</strong>
-                                <span>International collaboration opportunities</span>
+                                <strong><span class="en">Visiting Students & Scholars</span><span class="zh">访问学生与学者</span></strong>
+                                <span><span class="en">International collaboration opportunities</span><span class="zh">国际合作交流机会</span></span>
                             </div>
                         </li>
                     </ul>
                     <div class="contact-details">
-                        <h4>Contact Information</h4>
+                        <h4><span class="en">Contact Information</span><span class="zh">联系方式</span></h4>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <a href="mailto:chenxizh@sjtu.edu.cn">chenxizh@sjtu.edu.cn</a>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Room A407A, Chemical Engineering Building A<br>800 Dongchuan Road, Shanghai, China</span>
+                            <span><span class="en">Room A407A, Chemical Engineering Building A<br>800 Dongchuan Road, Shanghai, China</span><span class="zh">上海市东川路800号<br>化工学院A楼407A</span></span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-university"></i>
-                            <a href="https://scce.sjtu.edu.cn/teachers/3196.html" target="_blank">SJTU Faculty Page</a>
+                            <a href="https://scce.sjtu.edu.cn/teachers/3196.html" target="_blank"><span class="en">SJTU Faculty Page</span><span class="zh">交大教师主页</span></a>
                         </div>
                     </div>
                     <div class="contact-cta">
-                        <p>Interested in joining? Send your CV and a brief research statement to <a href="mailto:chenxizh@sjtu.edu.cn">chenxizh@sjtu.edu.cn</a></p>
+                        <p><span class="en">Interested in joining? Send your CV and a brief research statement to <a href="mailto:chenxizh@sjtu.edu.cn">chenxizh@sjtu.edu.cn</a></span><span class="zh">有意加入者请将简历及简要研究计划发送至 <a href="mailto:chenxizh@sjtu.edu.cn">chenxizh@sjtu.edu.cn</a></span></p>
                     </div>
                 </div>
                 <div class="contact-map">
                     <div class="map-placeholder">
                         <i class="fas fa-map-marked-alt"></i>
-                        <p>Shanghai Jiao Tong University</p>
-                        <span>Minhang Campus<br>School of Chemistry and Chemical Engineering</span>
-                        <a href="https://www.google.com/maps/place/Shanghai+Jiao+Tong+University+Minhang+Campus" target="_blank" class="btn btn-outline">View on Map</a>
+                        <p><span class="en">Shanghai Jiao Tong University</span><span class="zh">上海交通大学</span></p>
+                        <span><span class="en">Minhang Campus<br>School of Chemistry and Chemical Engineering</span><span class="zh">闵行校区<br>化学化工学院</span></span>
+                        <a href="https://www.google.com/maps/place/Shanghai+Jiao+Tong+University+Minhang+Campus" target="_blank" class="btn btn-outline"><span class="en">View on Map</span><span class="zh">查看地图</span></a>
                     </div>
                 </div>
             </div>
@@ -640,9 +619,9 @@
                 <div class="footer-links">
                     <a href="https://www.sjtu.edu.cn" target="_blank">SJTU</a>
                     <a href="https://scce.sjtu.edu.cn" target="_blank">SCCE</a>
-                    <a href="https://scce.sjtu.edu.cn/teachers/3196.html" target="_blank">Prof. Chen</a>
+                    <a href="https://scce.sjtu.edu.cn/teachers/3196.html" target="_blank"><span class="en">Prof. Chen</span><span class="zh">陈锡忠教授</span></a>
                 </div>
-                <p class="footer-copy">&copy; 2026 Smart Particle Fluid Lab, Shanghai Jiao Tong University. All rights reserved.</p>
+                <p class="footer-copy">&copy; 2026 Smart Particle Fluid Lab, Shanghai Jiao Tong University.</p>
             </div>
         </div>
     </footer>

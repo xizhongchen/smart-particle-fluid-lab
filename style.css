@@ -76,6 +76,96 @@ a:hover {
     padding: 0 24px;
 }
 
+/* --- Language Toggle --- */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 50px;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    height: 34px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    transition: all var(--transition);
+}
+
+.lang-toggle:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px var(--color-accent-glow);
+}
+
+.lang-toggle .lang-en,
+.lang-toggle .lang-zh {
+    padding: 0 12px;
+    line-height: 34px;
+    white-space: nowrap;
+    transition: all var(--transition);
+}
+
+.lang-toggle .lang-en {
+    background: var(--color-accent);
+    color: white;
+}
+
+.lang-toggle .lang-zh {
+    color: var(--color-text-secondary);
+}
+
+body.lang-zh .lang-toggle .lang-en {
+    background: transparent;
+    color: var(--color-text-secondary);
+}
+
+body.lang-zh .lang-toggle .lang-zh {
+    background: var(--color-accent);
+    color: white;
+}
+
+/* Language content switching */
+.zh { display: none; }
+
+body.lang-zh .en { display: none; }
+body.lang-zh .zh { display: inline; }
+
+body.lang-zh {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body.lang-zh .section-title,
+body.lang-zh .hero-title {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Block-level zh elements */
+body.lang-zh h1.zh,
+body.lang-zh h2.zh,
+body.lang-zh h3.zh,
+body.lang-zh h4.zh,
+body.lang-zh p.zh,
+body.lang-zh div.zh,
+body.lang-zh span.zh {
+    display: inline;
+}
+
+body.lang-zh .hero-title .zh {
+    display: inline;
+}
+
+body.lang-zh .hero-title .zh .highlight {
+    background: linear-gradient(135deg, var(--color-accent-light), var(--color-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+body.lang-zh .pi-affiliation .zh {
+    display: block;
+}
+
 /* --- Navigation --- */
 .navbar {
     position: fixed;
