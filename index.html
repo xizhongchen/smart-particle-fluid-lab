@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Particle Fluid Lab | Shanghai Jiao Tong University</title>
+    <meta name="description" content="Smart Particle Fluid Lab at Shanghai Jiao Tong University. Research in CFD-DEM, AI for Chemical Engineering, pharmaceutical engineering, and digital twins.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-icon"><i class="fas fa-atom"></i></span>
+                <span class="logo-text">SPFL</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#news" class="nav-link">News</a></li>
+                <li><a href="#contact" class="nav-link">Join Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <canvas id="particle-canvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">Shanghai Jiao Tong University</div>
+            <h1 class="hero-title">Smart Particle<br><span class="highlight">Fluid Lab</span></h1>
+            <p class="hero-subtitle">Bridging <em>artificial intelligence</em> and <em>particle engineering</em> to unlock the next generation of chemical process design</p>
+            <div class="hero-actions">
+                <a href="#research" class="btn btn-primary">Our Research</a>
+                <a href="#contact" class="btn btn-outline">Join the Lab</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#about"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">Pioneering Smart Particle Technologies</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-lead">The Smart Particle Fluid Lab (SPFL) is led by <strong>Prof. Xizhong Chen</strong> at the School of Chemistry and Chemical Engineering, Shanghai Jiao Tong University.</p>
+                    <p>Our lab sits at the intersection of <strong>computational fluid dynamics</strong>, <strong>machine learning</strong>, and <strong>particle engineering</strong>. We develop multi-scale simulation methods and AI-driven tools to understand, predict, and optimize complex particle-fluid systems across chemical, pharmaceutical, and energy applications.</p>
+                    <p>With strong collaborations with world-leading institutions including the <strong>University of Cambridge</strong>, <strong>University of Edinburgh</strong>, and industry partners such as <strong>BASF</strong>, <strong>Pfizer</strong>, and <strong>Novartis</strong>, our research spans from fundamental science to real-world industrial impact.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="41">0</span>
+                            <span class="stat-label">Publications</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="15">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="6">0</span>
+                            <span class="stat-label">Patents</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="9">0</span>
+                            <span class="stat-label">Awards</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-pi">
+                    <div class="pi-card">
+                        <div class="pi-image">
+                            <img src="https://scce.sjtu.edu.cn/upload/image/20240630/20240630172421.jpg" alt="Prof. Xizhong Chen" loading="lazy">
+                        </div>
+                        <div class="pi-info">
+                            <h3>Prof. Xizhong Chen</h3>
+                            <p class="pi-title">Tenured Associate Professor</p>
+                            <p class="pi-affiliation">School of Chemistry and Chemical Engineering<br>Shanghai Jiao Tong University</p>
+                            <div class="pi-contact">
+                                <a href="mailto:chenxizh@sjtu.edu.cn"><i class="fas fa-envelope"></i> chenxizh@sjtu.edu.cn</a>
+                                <span><i class="fas fa-map-marker-alt"></i> Room A407A, Chemical Engineering Building</span>
+                            </div>
+                            <div class="pi-links">
+                                <a href="https://scce.sjtu.edu.cn/teachers/3196.html" target="_blank" class="pi-link-btn">SJTU Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pi-cv">
+                        <h4>Education & Experience</h4>
+                        <ul class="timeline">
+                            <li>
+                                <span class="timeline-year">2021 - 2022</span>
+                                <span class="timeline-text">Assistant Professor, University of Sheffield</span>
+                            </li>
+                            <li>
+                                <span class="timeline-year">2020 - 2021</span>
+                                <span class="timeline-text">Eli Lilly Visiting Lecturer, University College Cork</span>
+                            </li>
+                            <li>
+                                <span class="timeline-year">2018 - 2020</span>
+                                <span class="timeline-text">Postdoctoral Researcher, University of Cambridge</span>
+                            </li>
+                            <li>
+                                <span class="timeline-year">2016 - 2018</span>
+                                <span class="timeline-text">Marie Curie Fellow, University of Edinburgh</span>
+                            </li>
+                            <li>
+                                <span class="timeline-year">2010 - 2016</span>
+                                <span class="timeline-text">Ph.D., Institute of Process Engineering, CAS</span>
+                            </li>
+                            <li>
+                                <span class="timeline-year">2006 - 2010</span>
+                                <span class="timeline-text">Dual B.S., Xiamen University</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="section research" id="research">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Research</span>
+                <h2 class="section-title">Our Research Areas</h2>
+                <p class="section-desc">We combine physics-based modeling with data-driven AI to solve complex problems in particle-fluid systems</p>
+            </div>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>CFD-DEM Simulation</h3>
+                    <p>High-fidelity computational fluid dynamics coupled with discrete element method for modeling gas-solid and liquid-solid multiphase flows at particle resolution.</p>
+                    <div class="research-tags">
+                        <span>CFD-DEM</span>
+                        <span>Multiphase Flow</span>
+                        <span>Granular Flow</span>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI for Chemical Engineering</h3>
+                    <p>Machine learning, deep learning, and graph neural networks for surrogate modeling, inverse design, and real-time prediction of chemical processes.</p>
+                    <div class="research-tags">
+                        <span>GNN</span>
+                        <span>Deep Learning</span>
+                        <span>Surrogate Model</span>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Pharmaceutical Engineering</h3>
+                    <p>Multi-scale modeling of solid dosage forms including powder mixing, tablet compression, and dissolution prediction using physics-informed neural networks.</p>
+                    <div class="research-tags">
+                        <span>Solid Dosage</span>
+                        <span>Powder Mixing</span>
+                        <span>Dissolution</span>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Digital Twin</h3>
+                    <p>Building digital twin systems for industrial equipment including fluidized bed jet mills, fixed-bed reactors, and corrosion pipeline monitoring.</p>
+                    <div class="research-tags">
+                        <span>Real-time Prediction</span>
+                        <span>Process Safety</span>
+                        <span>Equipment Design</span>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3>Particle Engineering</h3>
+                    <p>Fundamental study of particle breakage, adhesion, coating, and flowability using DEM bonded contact models and experimental characterization.</p>
+                    <div class="research-tags">
+                        <span>Particle Breakage</span>
+                        <span>Adhesion</span>
+                        <span>Flowability</span>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Multi-scale Modeling</h3>
+                    <p>Bridging nano, micro, and macro scales through dynamic multi-scale methods coupling two-fluid models with discrete particle models for industrial reactors.</p>
+                    <div class="research-tags">
+                        <span>Coarse-Graining</span>
+                        <span>Population Balance</span>
+                        <span>Reduced-Order Model</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="section publications" id="publications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Publications</span>
+                <h2 class="section-title">Selected Publications</h2>
+                <p class="section-desc">A selection of our recent peer-reviewed papers. For the full list, visit <a href="https://scce.sjtu.edu.cn/teachers/3196.html" target="_blank">Prof. Chen's SJTU profile</a>.</p>
+            </div>
+            <div class="pub-filters">
+                <button class="pub-filter active" data-filter="all">All</button>
+                <button class="pub-filter" data-filter="2026">2026</button>
+                <button class="pub-filter" data-filter="2025">2025</button>
+                <button class="pub-filter" data-filter="2024">2024</button>
+                <button class="pub-filter" data-filter="older">Earlier</button>
+            </div>
+            <div class="pub-list">
+                <!-- 2026/2027 -->
+                <div class="pub-item" data-year="2026">
+                    <div class="pub-year">2027</div>
+                    <div class="pub-content">
+                        <h4>Numerical simulation of an oscillating multi-fiber filter using a coupled Eulerian-Lagrangian and the immersed boundary method</h4>
+                        <p class="pub-authors">Fathzadeh M, Khodadadi S, Maddahian R, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>Chemical Engineering Science</em>, 339, 125242</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2026">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-content">
+                        <h4>A Lagrangian-Eulerian hybrid framework for identification of cluster topology and breakup in gas-solid flows</h4>
+                        <p class="pub-authors">Pan M, Dong Y, Khodadadi S, Luo ZH, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>AIChE Journal</em>, e70536</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2026">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-content">
+                        <h4>Surrogate-Based Multi-objective Bayesian Optimization for Energy Efficient Post-Combustion CO<sub>2</sub> Capture Using Process Simulation and Exact Gaussian Processes</h4>
+                        <p class="pub-authors">Yaqub MW, Huang Y, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>Energy</em>, 142424</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2026">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-content">
+                        <h4>Predictive modeling and inverse design of granular mixing with a Bayesian-enhanced graph neural network</h4>
+                        <p class="pub-authors">Yang K, Lin L, Zhou X, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>Chemical Engineering Science</em>, 124067</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2026">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-content">
+                        <h4>DeepSeek-LLM with Adaptive RAG for Pharmaceutical Dissolution Prediction</h4>
+                        <p class="pub-authors">Lin L, Zhou X, Yang K, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>Pharmaceutical Research</em></p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2026">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-content">
+                        <h4>Physics-Informed DeepONet for Fixed-Bed Reactor Design and Multiobjective Optimization</h4>
+                        <p class="pub-authors">Meng Z, Liu T, Mu L, Liu C, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>Industrial & Engineering Chemistry Research</em></p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2026">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-content">
+                        <h4>A transformer-based unified deep learning framework for spatiotemporal dynamics modeling from fluid to fluidized bed</h4>
+                        <p class="pub-authors">Liu T, Zhou Y, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>Physics of Fluids</em>, 38(2)</p>
+                    </div>
+                </div>
+                <!-- 2025 -->
+                <div class="pub-item" data-year="2025">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h4>A Differentiable Deep Learning Approach for Inverse Optimization of Hopper Flows in Particulate Manufacturing</h4>
+                        <p class="pub-authors">Liu C, Liu T, Jiang Y, Zhou Y, Li Y, Hong K, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>AIChE Journal</em>, e18825</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2025">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h4>Vision transformers for three-phase flow classifications with data augmentation through generative adversarial networks</h4>
+                        <p class="pub-authors">Yaqub MW, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>AIChE Journal</em>, e70002</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2025">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h4>Multi-objective differential optimization of fixed bed reactor geometries driven by graph convolutional neural network</h4>
+                        <p class="pub-authors">Liu T, Meng Z, Du W, Liu C, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>Chemical Engineering Journal</em>, 511, 161913</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2025">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h4>Differentiable simulation and optimization of particle-fluid flows using graph neural networks</h4>
+                        <p class="pub-authors">Liu C, Liu T, Yang K, Hong K, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>Powder Technology</em>, 121143</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2025">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h4>Unveiling particle mixing from non-destructive 3D XCT imaging with machine learning aided spatial distribution analysis</h4>
+                        <p class="pub-authors">Lin L, Yang K, Zhou X, Yu M, Liu L, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>Powder Technology</em>, 121699</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2025">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h4>A mechanical-thermal-chemical coupling discrete element method model for simulating hotspot generation and ignition in HMX-based explosives</h4>
+                        <p class="pub-authors">Pan M, Wang Z, Mu L, Liu C, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>Particuology</em>, 104, 68-87</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2025">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h4>Physics informed neural network model for multi-particle interaction forces</h4>
+                        <p class="pub-authors">Jiang Y, Byrne E, Glassey J, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>Particuology</em>, 96, 126-138</p>
+                    </div>
+                </div>
+                <!-- 2024 -->
+                <div class="pub-item" data-year="2024">
+                    <div class="pub-year">2024</div>
+                    <div class="pub-content">
+                        <h4>Integrating Graph Neural Network-Based Surrogate Modeling with Inverse Design for Granular Flows</h4>
+                        <p class="pub-authors">Lin L, Zhang Y, Wang L, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>Industrial & Engineering Chemistry Research</em>, 63(20), 9225-9235</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2024">
+                    <div class="pub-year">2024</div>
+                    <div class="pub-content">
+                        <h4>A comprehensive review of characterization techniques for particle adhesion and powder flowability</h4>
+                        <p class="pub-authors">Gao X, Yan WC, <strong>Chen X</strong>, Luo Z</p>
+                        <p class="pub-journal"><em>International Journal of Pharmaceutics</em>, 125029</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2024">
+                    <div class="pub-year">2024</div>
+                    <div class="pub-content">
+                        <h4>Multiscale Modeling and Artificial Intelligence for Multiphase Flow Science</h4>
+                        <p class="pub-authors">Lin L, Zhang X, Yu M, Mujtaba IM, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>Industrial & Engineering Chemistry Research</em>, 63(22), 9609-9610</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="2024">
+                    <div class="pub-year">2024</div>
+                    <div class="pub-content">
+                        <h4>Optimized structure design for binary particle mixing in rotating drums using a combined DEM and Gaussian process-based model</h4>
+                        <p class="pub-authors">Lin L, Yu M, Liu Y, <strong>Chen X</strong>, Luo Z</p>
+                        <p class="pub-journal"><em>Digital Chemical Engineering</em>, 12, 100175</p>
+                    </div>
+                </div>
+                <!-- Older -->
+                <div class="pub-item" data-year="older">
+                    <div class="pub-year">2023</div>
+                    <div class="pub-content">
+                        <h4>Reduced-order modeling of solid-liquid mixing in a stirred tank using data-driven singular value decomposition</h4>
+                        <p class="pub-authors"><strong>Chen X</strong>, Wang L, Meng F, Luo Z</p>
+                        <p class="pub-journal"><em>Chemical Engineering Research and Design</em>, 196, 40-51</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="older">
+                    <div class="pub-year">2022</div>
+                    <div class="pub-content">
+                        <h4>Physics-Informed Deep Learning for Modelling Particle Aggregation and Breakage Processes</h4>
+                        <p class="pub-authors">Wang LG, Ge R, <strong>Chen X</strong></p>
+                        <p class="pub-journal"><em>Chemical Engineering Journal</em>, 131220</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="older">
+                    <div class="pub-year">2022</div>
+                    <div class="pub-content">
+                        <h4>Review of Machine Learning for Hydrodynamics, Transport, and Reactions in Multiphase Flows and Reactors</h4>
+                        <p class="pub-authors">Wang LG, Ge R, <strong>Chen X</strong>, et al.</p>
+                        <p class="pub-journal"><em>Industrial & Engineering Chemistry Research</em>, 61(28), 9901-9949</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="older">
+                    <div class="pub-year">2021</div>
+                    <div class="pub-content">
+                        <h4>Multiscale digital twin for particle breakage in milling: From nanoindentation to population balance model</h4>
+                        <p class="pub-authors"><strong>Chen X</strong>, Elliott J</p>
+                        <p class="pub-journal"><em>Powder Technology</em>, 386, 247-261</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="older">
+                    <div class="pub-year">2019</div>
+                    <div class="pub-content">
+                        <h4>Quantifying the non-equilibrium characteristics of heterogeneous gas-solid flow of smooth, inelastic spheres using a CFD-DEM</h4>
+                        <p class="pub-authors"><strong>Chen X</strong>, Wang J</p>
+                        <p class="pub-journal"><em>Journal of Fluid Mechanics</em>, 866, 776-790</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="older">
+                    <div class="pub-year">2018</div>
+                    <div class="pub-content">
+                        <h4>Mesoscale-structure-based dynamic multiscale method for gas-solid flow</h4>
+                        <p class="pub-authors"><strong>Chen X</strong>, Wang J</p>
+                        <p class="pub-journal"><em>Chemical Engineering Science</em>, 192, 864-881</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="older">
+                    <div class="pub-year">2017</div>
+                    <div class="pub-content">
+                        <h4>Dynamic Multiscale Method for Gas-Solid Flow via Spatiotemporal Coupling of Two-Fluid Model and Discrete Particle Model</h4>
+                        <p class="pub-authors"><strong>Chen X</strong>, Wang J, Li J</p>
+                        <p class="pub-journal"><em>AIChE Journal</em>, 63, 3681-3691</p>
+                    </div>
+                </div>
+                <div class="pub-item" data-year="older">
+                    <div class="pub-year">2014</div>
+                    <div class="pub-content">
+                        <h4>A comparison of two-fluid model, dense discrete particle model and CFD-DEM method for modeling impinging gas-solid flows</h4>
+                        <p class="pub-authors"><strong>Chen X</strong>, Luo Z, Yan W, Lu Y, Ng I</p>
+                        <p class="pub-journal"><em>Powder Technology</em>, 254, 94-102</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section team" id="team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Team</span>
+                <h2 class="section-title">Our Group</h2>
+                <p class="section-desc">A diverse and international team of researchers working at the frontier of particle science and AI</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card pi">
+                    <div class="team-avatar">
+                        <img src="https://scce.sjtu.edu.cn/upload/image/20240630/20240630172421.jpg" alt="Prof. Xizhong Chen" loading="lazy">
+                    </div>
+                    <h3>Prof. Xizhong Chen</h3>
+                    <p class="team-role">Principal Investigator</p>
+                    <p class="team-desc"> Associate Professor</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar placeholder"><i class="fas fa-user"></i></div>
+                    <h3>Tingting Liu</h3>
+                    <p class="team-role">Ph.D. Student</p>
+                    <p class="team-desc">Deep learning for reactor design</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar placeholder"><i class="fas fa-user"></i></div>
+                    <h3>Dr. Sajad Khodadadi</h3>
+                    <p class="team-role">Postdoctoral Researcher</p>
+                    <p class="team-desc">Multi-scale modeling</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar placeholder"><i class="fas fa-user"></i></div>
+                    <h3>Dr. Muhammad Waqas Yaqub</h3>
+                    <p class="team-role">Postdoctoral Researcher</p>
+                    <p class="team-desc">Vision transformers & ML</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar placeholder"><i class="fas fa-user"></i></div>
+                    <h3>Leqi Lin</h3>
+                    <p class="team-role">Ph.D. Student</p>
+                    <p class="team-desc">Graph neural networks for granular flows</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar placeholder"><i class="fas fa-user"></i></div>
+                    <h3>Kaiyuan Yang</h3>
+                    <p class="team-role">Ph.D. Student</p>
+                    <p class="team-desc">DEM & elastoplastic bond models</p>
+                </div>
+
+            </div>
+            <div class="team-alumni">
+                <h3>Alumni & Collaborators</h3>
+                <p>Our group maintains collaborations with researchers at the <strong>University of Edinburgh</strong>, <strong>University of Sheffield</strong>, and industry partners. Many of our former members now hold positions at leading universities and companies worldwide.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="section news" id="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">News</span>
+                <h2 class="section-title">Latest Updates</h2>
+            </div>
+            <div class="news-grid">
+                <div class="news-item">
+                    <div class="news-date">
+                        <span class="news-month">2026</span>
+                    </div>
+                    <div class="news-content">
+                        <h4>New paper in <em>Chemical Engineering Science</em></h4>
+                        <p>Our work on Bayesian-enhanced GNN for predictive modeling and inverse design of granular mixing has been published.</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        <span class="news-month">2026</span>
+                    </div>
+                    <div class="news-content">
+                        <h4>DeepSeek-LLM for Pharmaceutical Dissolution</h4>
+                        <p>Our latest work combining large language models with Adaptive RAG for pharmaceutical dissolution prediction is now published in <em>Pharmaceutical Research</em>.</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        <span class="news-month">2025</span>
+                    </div>
+                    <div class="news-content">
+                        <h4>Multiple papers accepted in top journals</h4>
+                        <p>Congratulations to the team! Papers accepted in <em>AIChE Journal</em>, <em>Chemical Engineering Journal</em>, <em>Powder Technology</em>, and <em>Particuology</em>.</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        <span class="news-month">2025</span>
+                    </div>
+                    <div class="news-content">
+                        <h4>Recruiting Ph.D. students and Postdocs</h4>
+                        <p>We are actively recruiting graduate students and postdoctoral researchers in chemical engineering, AI, and particle engineering. See <a href="#contact">Join Us</a> for details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Join Us Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Join Us</span>
+                <h2 class="section-title">Open Positions</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>We Are Looking for Motivated Students & Researchers</h3>
+                    <p>The Smart Particle Fluid Lab is actively recruiting:</p>
+                    <ul class="positions-list">
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <strong>Ph.D. Students</strong>
+                                <span>Chemical Engineering, AI, CFD, Particle Engineering</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-user-graduate"></i>
+                            <div>
+                                <strong>Master's Students</strong>
+                                <span>Chemical Engineering, Computer Simulation</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-flask"></i>
+                            <div>
+                                <strong>Postdoctoral Researchers</strong>
+                                <span>AI + Chemical Engineering, Digital Twins</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <strong>Visiting Students & Scholars</strong>
+                                <span>International collaboration opportunities</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="contact-details">
+                        <h4>Contact Information</h4>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:chenxizh@sjtu.edu.cn">chenxizh@sjtu.edu.cn</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Room A407A, Chemical Engineering Building A<br>800 Dongchuan Road, Shanghai, China</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-university"></i>
+                            <a href="https://scce.sjtu.edu.cn/teachers/3196.html" target="_blank">SJTU Faculty Page</a>
+                        </div>
+                    </div>
+                    <div class="contact-cta">
+                        <p>Interested in joining? Send your CV and a brief research statement to <a href="mailto:chenxizh@sjtu.edu.cn">chenxizh@sjtu.edu.cn</a></p>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Shanghai Jiao Tong University</p>
+                        <span>Minhang Campus<br>School of Chemistry and Chemical Engineering</span>
+                        <a href="https://www.google.com/maps/place/Shanghai+Jiao+Tong+University+Minhang+Campus" target="_blank" class="btn btn-outline">View on Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon"><i class="fas fa-atom"></i></span>
+                    <span>Smart Particle Fluid Lab</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.sjtu.edu.cn" target="_blank">SJTU</a>
+                    <a href="https://scce.sjtu.edu.cn" target="_blank">SCCE</a>
+                    <a href="https://scce.sjtu.edu.cn/teachers/3196.html" target="_blank">Prof. Chen</a>
+                </div>
+                <p class="footer-copy">&copy; 2026 Smart Particle Fluid Lab, Shanghai Jiao Tong University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
